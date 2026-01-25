@@ -14,6 +14,9 @@ module.exports = {
                 card: "var(--card)",
                 border: "var(--border)",
                 muted: "var(--muted)",
+                accent: "var(--accent)",
+                /* To use in components e.g., className="bg-accent text-foreground" */
+                accent_light: "var(--accent-light)",
             },
         },
     },

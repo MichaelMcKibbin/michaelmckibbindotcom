@@ -2,31 +2,61 @@
 
 /* CSS variables for light and dark themes controlled by the `.dark` class on html */
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --card: #ffffff;
-  --muted: #f1f5f9;
-  --border: #e2e8f0;
+  /* Core surfaces */
+  --background: #f9fafb;          /* Soft off-white */
+  --foreground: #0f172a;          /* Slate-900 */
+
+  /* Cards & surfaces */
+  --card: #ffffff;                /* Clean white cards */
+  --border: #e5e7eb;              /* Slate-200 */
+
+  /* Text hierarchy */
+  --muted: #64748b;               /* Slate-500 (secondary text) */
+
+  /* Accent (calm tech blue) */
+  --accent: #2563eb;              /* Blue-600 */
+  --accent-light: #60a5fa;        /* Blue-400 */
+
+  /* Fonts */
+  --font-geist-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, sans-serif;
 }
+
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --card: #111827;
-  --muted: #1f2937;
-  --border: #1f2937;
+  /* Core surfaces */
+  --background: #020617;          /* Slate-950 */
+  --foreground: #e5e7eb;          /* Slate-200 */
+
+  /* Cards & surfaces */
+  --card: #0f172a;                /* Slate-900 */
+  --border: #1e293b;              /* Slate-800 */
+
+  /* Text hierarchy */
+  --muted: #94a3b8;               /* Slate-400 */
+
+  /* Accent (same family as light mode) */
+  --accent: #3b82f6;              /* Blue-500 */
+  --accent-light: #60a5fa;        /* Blue-400 */
+
+  /* Fonts */
+  --font-geist-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, sans-serif;
 }
 
-/* Optionally respect system before hydration; next-themes will override with class */
+/* Fallback: respect system dark mode before hydration.
+   next-themes will override by adding .dark or .light to <html>. */
 @media (prefers-color-scheme: dark) {
   :root:not(.dark):not(.light) {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --card: #111827;
-    --muted: #1f2937;
-    --border: #1f2937;
+    --background: #020617;     /* Slate-950 */
+    --foreground: #e5e7eb;     /* Slate-200 */
+    --card: #0f172a;           /* Slate-900 */
+    --muted: #94a3b8;          /* Slate-400 */
+    --border: #1e293b;         /* Slate-800 */
+    --accent: #3b82f6;         /* Blue-500 */
+    --accent-light: #60a5fa;   /* Blue-400 */
+    --font-geist-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, sans-serif;
   }
 }
+
 
 /* Base element resets that use variables, not fixed colors */
 @layer base {
