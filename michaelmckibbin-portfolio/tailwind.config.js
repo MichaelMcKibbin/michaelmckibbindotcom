@@ -15,8 +15,6 @@ module.exports = {
                 border: "var(--border)",
                 muted: "var(--muted)",
                 hover: "var(--hover)",
-            },
-        },
                 accent_light: "var(--accent-light)",
             },
         },
