@@ -13,7 +13,10 @@
   /* Text hierarchy */
   --muted: #64748b;               /* Slate-500 (secondary text) */
 
-  /* Accent (calm tech blue) */
+  /* Interactive states */
+  --hover: #f3f4f6;               /* Slate-100 (hover backgrounds) */
+
+  /* Accent */
   --accent: #2563eb;              /* Blue-600 */
   --accent-light: #60a5fa;        /* Blue-400 */
 
@@ -34,6 +37,9 @@
   /* Text hierarchy */
   --muted: #94a3b8;               /* Slate-400 */
 
+  /* Interactive states */
+  --hover: #1e293b;               /* Slate-800 (hover backgrounds) */
+
   /* Accent (same family as light mode) */
   --accent: #3b82f6;              /* Blue-500 */
   --accent-light: #60a5fa;        /* Blue-400 */
@@ -51,6 +57,7 @@
     --card: #0f172a;           /* Slate-900 */
     --muted: #94a3b8;          /* Slate-400 */
     --border: #1e293b;         /* Slate-800 */
+    --hover: #1e293b;          /* Slate-800 (hover backgrounds) */
     --accent: #3b82f6;         /* Blue-500 */
     --accent-light: #60a5fa;   /* Blue-400 */
     --font-geist-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, sans-serif;
@@ -68,7 +75,7 @@
 
   /* Use Tailwind fonts if provided via CSS variables; fallback to system */
   body {
-    font-family: var(--font-geist-sans, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji");
+    font-family: var(--font-geist-sans, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"), serif;
   }
 
   /* Example scrollbar styling that respects variables */
@@ -83,4 +90,5 @@
   --color-card: var(--card);
   --color-border: var(--border);
   --color-muted: var(--muted);
+  --color-hover: var(--hover);
 }

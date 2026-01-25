@@ -26,13 +26,13 @@ export default function Home() {
               </a>
               <a
                   href="/cv"
-                  className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-muted"
+                  className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-hover"
               >
                 Michael's CV
               </a>
               <a
                   href="#contact"
-                  className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-muted"
+                  className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-hover"
               >
                 Contact
               </a>
@@ -41,19 +41,19 @@ export default function Home() {
 
           {/* Sections */}
           <section className="mt-16 grid gap-6 sm:grid-cols-3">
-            <div className="rounded-2xl border border-border bg-card p-6 hover:bg-muted">
+            <div className="rounded-2xl border border-border bg-card p-6 hover:bg-hover">
               <h2 className="text-sm font-semibold">Focus</h2>
               <p className="mt-2 text-sm text-muted">
                 Cloud, DevOps automation, secure software design, and pragmatic engineering.
               </p>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-6 hover:bg-muted">
+            <div className="rounded-2xl border border-border bg-card p-6 hover:bg-hover">
               <h2 className="text-sm font-semibold">Stack</h2>
               <p className="mt-2 text-sm text-muted">
                 Java • C#/.NET • Next.js • TypeScript • AWS • CI/CD • SQL
               </p>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-6 hover:bg-muted">
+            <div className="rounded-2xl border border-border bg-card p-6 hover:bg-hover">
               <h2 className="text-sm font-semibold">Currently</h2>
               <p className="mt-2 text-sm text-muted">
                 Building portfolio projects and sharpening full-stack + cloud skills.
@@ -118,7 +118,7 @@ export default function Home() {
                 Email me
               </a>
               <a
-                  className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-muted"
+                  className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-hover"
                   href="https://www.linkedin.com/"
                   target="_blank"
                   rel="noreferrer"
@@ -150,7 +150,7 @@ function ProjectCard({
   return (
       <a
           href={href}
-          className="group rounded-2xl border border-border bg-card p-6 transition hover:bg-muted"
+          className="group rounded-2xl border border-border bg-card p-6 transition hover:bg-hover"
       >
         <div className="flex items-start justify-between gap-4">
           <h3 className="text-base font-semibold text-foreground">{title}</h3>

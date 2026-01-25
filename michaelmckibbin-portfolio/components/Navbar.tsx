@@ -81,7 +81,7 @@ export default function Navbar() {
                                     "rounded-xl px-3 py-2 text-sm transition",
                                     active
                                         ? "bg-foreground text-background"
-                                        : "text-foreground/80 hover:bg-muted hover:text-foreground",
+                                        : "text-foreground/80 hover:bg-hover hover:text-foreground",
                                 ].join(" ")}
                             >
                                 {item.label}
@@ -92,14 +92,14 @@ export default function Navbar() {
                         href="/MichaelMcKibbin_WebCV.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-muted"
+                        className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-hover"
                     >
                         Download CV
                     </a>
                     <button
                         type="button"
                         aria-label="Toggle dark mode"
-                        className="ml-2 rounded-xl border border-border px-3 py-2 text-sm text-foreground hover:bg-muted"
+                        className="ml-2 rounded-xl border border-border px-3 py-2 text-sm text-foreground hover:bg-hover"
                         onClick={() => {
                             const current = resolvedTheme ?? theme;
                             setTheme(current === "dark" ? "light" : "dark");
@@ -115,7 +115,7 @@ export default function Navbar() {
                     type="button"
                     aria-label={open ? "Close menu" : "Open menu"}
                     aria-expanded={open}
-                    className="inline-flex items-center justify-center rounded-xl border border-border p-2 text-foreground hover:bg-muted md:hidden"
+                    className="inline-flex items-center justify-center rounded-xl border border-border p-2 text-foreground hover:bg-hover md:hidden"
                     onClick={() => setOpen((v) => !v)}
                 >
                     {/* Simple hamburger / close icon */}
@@ -159,7 +159,7 @@ export default function Navbar() {
                                                 "block rounded-xl px-3 py-2 text-sm transition",
                                                 active
                                                     ? "bg-foreground text-background"
-                                                    : "text-foreground/80 hover:bg-muted hover:text-foreground",
+                                                    : "text-foreground/80 hover:bg-hover hover:text-foreground",
                                             ].join(" ")}
                                         >
                                             {item.label}
@@ -181,7 +181,7 @@ export default function Navbar() {
                                 <li className="mt-2">
                                     <button
                                         type="button"
-                                        className="block w-full rounded-xl border border-border px-3 py-2 text-left text-sm text-foreground hover:bg-muted"
+                                        className="block w-full rounded-xl border border-border px-3 py-2 text-left text-sm text-foreground hover:bg-hover"
                                         onClick={() => {
                                             const current = resolvedTheme ?? theme;
                                             setTheme(current === "dark" ? "light" : "dark");
