@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* CSS variables for light and dark themes controlled by the `.dark` class on html */
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --muted: #f1f5f9;
+  --border: #e2e8f0;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #111827;
+  --muted: #1f2937;
+  --border: #1f2937;
+}
+
+/* Optionally respect system before hydration; next-themes will override with class */
+@media (prefers-color-scheme: dark) {
+  :root:not(.dark):not(.light) {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --card: #111827;
+    --muted: #1f2937;
+    --border: #1f2937;
+  }
+}
+
+/* Base element resets that use variables, not fixed colors */
+@layer base {
+  html, body {
+    min-height: 100%;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  /* Use Tailwind fonts if provided via CSS variables; fallback to system */
+  body {
+    font-family: var(--font-geist-sans, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji");
+  }
+
+  /* Example scrollbar styling that respects variables */
+  * {
+    scrollbar-color: var(--foreground) var(--background);
+  }
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+}
