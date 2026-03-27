@@ -19,7 +19,7 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-3">
               <a
-                  href="#projects"
+                  href="/projects"
                   className="rounded-xl bg-foreground px-4 py-2 text-sm font-medium text-background hover:bg-foreground/90"
               >
                 View projects
@@ -62,45 +62,17 @@ export default function Home() {
           </section>
 
           {/* Projects */}
-          <section id="projects" className="mt-16 scroll-mt-24">
-            <div className="flex items-end justify-between gap-6">
-              <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
-              <a
-                  className="text-sm text-foreground/80 underline hover:text-foreground"
-                  href="https://github.com/MichaelMcKibbin"
-                  target="_blank"
-                  rel="noreferrer"
-              >
-                GitHub
-              </a>
-            </div>
-
-            <div className="mt-6 grid gap-6 sm:grid-cols-2">
-              <ProjectCard
-                  title="PuzzlePaddy"
-                  description="Games and puzzles built with Next.js — playful UX, clean engineering."
-                  tech="Next.js • TypeScript • Tailwind"
-                  href="https://puzzlepaddy.com"
-              />
-              <ProjectCard
-                  title="Vienna U-Bahn Route Finder"
-                  description="Java/JavaFX route finder using a richer station dataset with coordinates and lines."
-                  tech="Java • JavaFX • Algorithms"
-                  href="#"
-              />
-              <ProjectCard
-                  title="Ticket Tracking App"
-                  description="Desktop trouble-ticket tracker in JavaFX with SQLite and structured workflow."
-                  tech="Java • JavaFX • SQLite"
-                  href="#"
-              />
-              <ProjectCard
-                  title="Cloud / DevOps Automation"
-                  description="Scripts and pipelines for AWS automation (EC2/S3/alarms), CI/CD and deployment."
-                  tech="AWS • Python • GitHub Actions"
-                  href="#"
-              />
-            </div>
+          <section className="mt-16 rounded-2xl border border-border bg-card p-6">
+            <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
+            <p className="mt-2 text-sm text-muted">
+              Browse featured builds, case-study notes, and source links on the dedicated projects page.
+            </p>
+            <a
+                href="/projects"
+                className="mt-4 inline-flex rounded-xl bg-foreground px-4 py-2 text-sm font-medium text-background hover:bg-foreground/90"
+            >
+              Go to projects
+            </a>
           </section>
 
           {/* Contact */}
@@ -136,28 +108,3 @@ export default function Home() {
   );
 }
 
-function ProjectCard({
-                       title,
-                       description,
-                       tech,
-                       href,
-                     }: {
-  title: string;
-  description: string;
-  tech: string;
-  href: string;
-}) {
-  return (
-      <a
-          href={href}
-          className="group rounded-2xl border border-border bg-card p-6 transition hover:bg-hover"
-      >
-        <div className="flex items-start justify-between gap-4">
-          <h3 className="text-base font-semibold text-foreground">{title}</h3>
-          <span className="text-sm text-muted group-hover:text-foreground">↗</span>
-        </div>
-        <p className="mt-2 text-sm text-muted">{description}</p>
-        <p className="mt-3 text-xs text-muted">{tech}</p>
-      </a>
-  );
-}

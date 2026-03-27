@@ -9,25 +9,17 @@ import { useTheme } from "next-themes";
 type NavItem = {
     href: string;
     label: string;
-    kind: "route" | "hash";
 };
 
 const navItems: NavItem[] = [
-    { href: "/", label: "Home", kind: "route" },
-    { href: "/#projects", label: "Projects", kind: "hash" },
-    { href: "/contact", label: "Contact", kind: "route" },
+    { href: "/", label: "Home" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
 ];
 
 
-function isActiveLink(pathname: string, currentHash: string, item: NavItem) {
-    // Route items (e.g. /, /cv)
-    if (item.kind === "route") return pathname === item.href;
-
-    // Hash items only make sense on the home page
-    if (pathname !== "/") return false;
-
-    const itemHash = item.href.split("#")[1] ?? "";
-    return currentHash === `#${itemHash}`;
+function isActiveLink(pathname: string, item: NavItem) {
+    return pathname === item.href;
 }
 
 export default function Navbar() {
@@ -35,17 +27,8 @@ export default function Navbar() {
     const [mounted, setMounted] = useState(false);
     const pathname = usePathname() ?? "";
     const [open, setOpen] = useState(false);
-    const [hash, setHash] = useState<string>("");
 
     useEffect(() => setMounted(true), []);
-
-    // Track the hash for active styling on home-page sections
-    useEffect(() => {
-        const updateHash = () => setHash(window.location.hash || "");
-        updateHash();
-        window.addEventListener("hashchange", updateHash);
-        return () => window.removeEventListener("hashchange", updateHash);
-    }, []);
 
     // Close mobile menu on route change
     useEffect(() => {
@@ -71,7 +54,7 @@ export default function Navbar() {
                 {/* Desktop nav */}
                 <nav className="hidden items-center gap-2 md:flex">
                     {navItems.map((item) => {
-                        const active = isActiveLink(pathname, hash, item);
+                        const active = isActiveLink(pathname, item);
                         return (
                             <Link
                                 key={item.href}
@@ -148,7 +131,7 @@ export default function Navbar() {
                     <nav className="mx-auto max-w-5xl px-6 py-3">
                         <ul className="flex flex-col gap-1">
                             {navItems.map((item) => {
-                                const active = isActiveLink(pathname, hash, item);
+                                const active = isActiveLink(pathname, item);
                                 return (
                                     <li key={item.href}>
                                         <Link
