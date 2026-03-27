@@ -159,7 +159,7 @@ export default function Contact() {
                                 rows="6"
                                 className="w-full resize-none rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-foreground/20"
                             />
-                            <label htmlFor="note" className="mb-2 block text-xs text-muted font-small text-foreground">
+                            <label htmlFor="note" className="mb-2 block text-xs text-muted font-small ">
                                 This form uses the reCAPTCHA v2 "I'm not a robot" Checkbox. Other reCAPTCHA types (v2 Invisible, & v3 Score Based) are available for your site.
                             </label>
                         </div>
