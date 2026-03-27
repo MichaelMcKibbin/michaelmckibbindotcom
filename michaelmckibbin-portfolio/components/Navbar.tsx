@@ -15,7 +15,7 @@ type NavItem = {
 const navItems: NavItem[] = [
     { href: "/", label: "Home", kind: "route" },
     { href: "/#projects", label: "Projects", kind: "hash" },
-    { href: "/#contact", label: "Contact", kind: "hash" },
+    { href: "/contact", label: "Contact", kind: "route" },
 ];
 
 
@@ -33,7 +33,7 @@ function isActiveLink(pathname: string, currentHash: string, item: NavItem) {
 export default function Navbar() {
     const { theme, setTheme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
-    const pathname = usePathname();
+    const pathname = usePathname() ?? "";
     const [open, setOpen] = useState(false);
     const [hash, setHash] = useState<string>("");
 
