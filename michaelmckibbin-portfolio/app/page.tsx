@@ -12,9 +12,7 @@ export default function Home() {
                 Michael McKibbin
               </h1>
               <p className="max-w-2xl text-lg text-muted">
-                I build reliable systems, secure platforms, and occasional playful projects.
-                Based in Ireland. Dual US/EU work eligibility.
-              </p>
+                I build reliable systems, secure platforms, and occasional playful projects.</p>
             </div>
 
             <div className="flex flex-wrap gap-3">

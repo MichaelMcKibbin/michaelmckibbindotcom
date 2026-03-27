@@ -1,29 +1,6 @@
-const projects = [
-    {
-        title: "PuzzlePaddy",
-        description: "Games and puzzles built with Next.js — playful UX, clean engineering.",
-        tech: "Next.js • TypeScript • Tailwind",
-        href: "https://puzzlepaddy.com",
-    },
-    {
-        title: "Vienna U-Bahn Route Finder",
-        description: "Java/JavaFX route finder using a richer station dataset with coordinates and lines.",
-        tech: "Java • JavaFX • Algorithms",
-        href: "#",
-    },
-    {
-        title: "Ticket Tracking App",
-        description: "Desktop trouble-ticket tracker in JavaFX with SQLite and structured workflow.",
-        tech: "Java • JavaFX • SQLite",
-        href: "#",
-    },
-    {
-        title: "Cloud / DevOps Automation",
-        description: "Scripts and pipelines for AWS automation (EC2/S3/alarms), CI/CD and deployment.",
-        tech: "AWS • Python • GitHub Actions",
-        href: "#",
-    },
-];
+import Link from "next/link";
+import { projects } from "./projects-data";
+
 
 export default function ProjectsPage() {
     return (
@@ -55,7 +32,7 @@ export default function ProjectsPage() {
                             title={project.title}
                             description={project.description}
                             tech={project.tech}
-                            href={project.href}
+                            slug={project.slug}
                         />
                     ))}
                 </section>
@@ -68,16 +45,16 @@ function ProjectCard({
     title,
     description,
     tech,
-    href,
+    slug,
 }: {
     title: string;
     description: string;
     tech: string;
-    href: string;
+    slug: string;
 }) {
     return (
-        <a
-            href={href}
+        <Link
+            href={`/projects/${slug}`}
             className="group rounded-2xl border border-border bg-card p-6 transition hover:bg-hover"
         >
             <div className="flex items-start justify-between gap-4">
@@ -86,7 +63,7 @@ function ProjectCard({
             </div>
             <p className="mt-2 text-sm text-muted">{description}</p>
             <p className="mt-3 text-xs text-muted">{tech}</p>
-        </a>
+        </Link>
     );
 }
 
