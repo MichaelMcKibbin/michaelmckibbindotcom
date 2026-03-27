@@ -79,7 +79,7 @@ export default function Home() {
           <section id="contact" className="mt-16 scroll-mt-24">
             <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
             <p className="mt-2 text-sm text-muted">
-              Email is simplest (static hosting-friendly).
+              Ways to reach me.
             </p>
 
             <div className="mt-4 flex flex-wrap gap-3">
@@ -91,7 +91,7 @@ export default function Home() {
               </a>
               <a
                   className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-hover"
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/michaelkevinmckibbin/"
                   target="_blank"
                   rel="noreferrer"
               >

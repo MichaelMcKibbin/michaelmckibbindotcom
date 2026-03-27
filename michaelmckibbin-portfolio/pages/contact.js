@@ -85,12 +85,32 @@ export default function Contact() {
 
     return (
         <main className="min-h-screen bg-background text-foreground">
-            <div className="mx-auto max-w-5xl px-6 py-16">
-                <header className="space-y-3">
-                    <p className="text-sm tracking-wide text-muted">Get in touch</p>
-                    <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Contact</h1>
-                    <p className="max-w-2xl text-sm text-muted sm:text-base">
-                        Send a message and I will get back to you as soon as possible.
+            <div className="mx-auto max-w-5xl px-6 py-16 space-y-6">
+                <h1 className="text-4xl font-semibold tracking-tight sm:text-3xl space-y-6">Contact Michael</h1>
+                <div className="flex flex-wrap gap-5 ">
+                <a
+                    className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-hover"
+                    href="https://www.linkedin.com/in/michaelkevinmckibbin/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    LinkedIn
+                </a>
+                <a
+                    className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-hover"
+                    href="https://github.com/MichaelMcKibbin"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    GitHub
+                </a>
+                </div>
+
+                <header className="space-y-5">
+
+
+                    <p className="max-w-5xl text-sm text-muted sm:text-base">
+                        Find me on LinkedIn, GitHub, or send me a message and I will get back to you as soon as possible.
                     </p>
                 </header>
 
@@ -139,6 +159,9 @@ export default function Contact() {
                                 rows="6"
                                 className="w-full resize-none rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-foreground/20"
                             />
+                            <label htmlFor="note" className="mb-2 block text-xs text-muted font-small text-foreground">
+                                This form uses the reCAPTCHA v2 "I'm not a robot" Checkbox. Other reCAPTCHA types (v2 Invisible, & v3 Score Based) are available for your site.
+                            </label>
                         </div>
 
                         <div className="flex justify-center sm:justify-start">
