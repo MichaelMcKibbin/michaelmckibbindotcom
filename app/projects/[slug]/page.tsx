@@ -81,13 +81,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     )}
                 </section>
 
+
                 {project.images.length > 0 && (
                     <section className="mt-10 grid gap-6 sm:grid-cols-2">
-                        {project.images.map((image) => (
-                            <div
-                                key={image.src}
-                                className="overflow-hidden rounded-2xl border border-border bg-card"
-                            >
+                        {project.images.map((image) => {
+                            const content = (
                                 <Image
                                     src={image.src}
                                     alt={image.alt}
@@ -95,32 +93,64 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                                     height={500}
                                     className="h-full w-full object-cover"
                                 />
-                            </div>
-                        ))}
-                    </section>
-                )}
-                {project.videos && project.videos.length > 0 && (
-                    <section className="mt-10 grid gap-6 sm:grid-cols-2">
-                        {project.videos.map((video) => (
-                            <div
-                                key={video.src}
-                                className="overflow-hidden rounded-2xl border border-border bg-card"
-                            >
-                                <video
-                                    src={video.src}
-                                    className="h-full w-full object-cover"
-                                    controls
-                                    // autoPlay
-                                    // loop
-                                    // muted
-                                    poster={video.poster}
+                            );
+
+                            return (
+                                <div
+                                    key={image.src}
+                                    className="overflow-hidden rounded-2xl border border-border bg-card"
                                 >
-                                    Sorry, your browser doesn't support embedded videos.
-                                </video>
-                            </div>
-                        ))}
+                                    {image.href ? (
+                                        <Link href={image.href} target="_blank" rel="noopener noreferrer">
+                                            {content}
+                                        </Link>
+                                    ) : (
+                                        content
+                                    )}
+                                </div>
+                            );
+                        })}
                     </section>
                 )}
+
+{project.videos && project.videos.length > 0 && (
+  <section className="mt-10 grid gap-6 sm:grid-cols-2">
+    {project.videos.map((video) => {
+      const content = (
+        <video
+          src={video.src}
+          className="h-full w-full object-cover"
+          controls
+          // autoPlay
+          // loop
+          // muted
+          poster={video.poster}
+        >
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+      );
+
+      return (
+        <div
+          key={video.src}
+          className="overflow-hidden rounded-2xl border border-border bg-card"
+        >
+          {video.href ? (
+            <Link
+              href={video.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {content}
+            </Link>
+          ) : (
+            content
+          )}
+        </div>
+      );
+    })}
+  </section>
+)}
 
             </div>
         </main>

@@ -7,23 +7,21 @@ export default function ProjectsPage() {
         <main className="min-h-screen bg-background text-foreground">
             <div className="mx-auto max-w-5xl px-6 py-16">
                 <header className="space-y-3">
-                    <p className="text-sm tracking-wide text-muted">Selected work</p>
-                    <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Projects</h1>
+                    <h1 className="flex items-center gap-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+                      <span>Projects</span>
+                      <a
+                        className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-hover"
+                        href="https://github.com/MichaelMcKibbin"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        GitHub
+                      </a>
+                    </h1>
                     <p className="max-w-2xl text-sm text-muted sm:text-base">
                         A selection of personal and technical projects across web, desktop, and cloud automation.
                     </p>
                 </header>
-
-                <div className="mt-6">
-                    <a
-                        className="text-sm text-foreground/80 underline hover:text-foreground"
-                        href="https://github.com/MichaelMcKibbin"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        View GitHub profile
-                    </a>
-                </div>
 
                 <section className="mt-8 grid gap-6 sm:grid-cols-2">
                     {projects.map((project) => (

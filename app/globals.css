@@ -8,13 +8,13 @@
 
   /* Cards & surfaces */
   --card: #ffffff;                /* Clean white cards */
-  --border: #e5e7eb;              /* Slate-200 */
+  --border: #C9D5EAFF;              /* Slate-300 */
 
   /* Text hierarchy */
   --muted: #64748b;               /* Slate-500 (secondary text) */
 
   /* Interactive states */
-  --hover: #f3f4f6;               /* Slate-100 (hover backgrounds) */
+  --hover: #e5e7eb;               /* Slate-200 (hover backgrounds) */
 
   /* Accent */
   --accent: #2563eb;              /* Blue-600 */

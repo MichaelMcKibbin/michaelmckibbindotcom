@@ -23,10 +23,12 @@ export default function Home() {
                 View projects
               </a>
               <a
-                  href="/cv"
                   className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-hover"
+                  href="https://www.linkedin.com/in/michaelkevinmckibbin/"
+                  target="_blank"
+                  rel="noreferrer"
               >
-                Michael's CV
+                LinkedIn
               </a>
               <a
                   href="/contact"
@@ -60,7 +62,7 @@ export default function Home() {
           </section>
 
           {/* Projects */}
-          <section className="mt-16 rounded-2xl border border-border bg-card p-6">
+          <section className="mt-16 rounded-2xl border border-border bg-card p-6 hover:bg-hover">
             <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
             <p className="mt-2 text-sm text-muted">
               Browse featured builds, case-study notes, and source links on the dedicated projects page.
@@ -73,30 +75,7 @@ export default function Home() {
             </a>
           </section>
 
-          {/* Contact */}
-          <section id="contact" className="mt-16 scroll-mt-24">
-            <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
-            <p className="mt-2 text-sm text-muted">
-              Ways to reach me.
-            </p>
 
-            <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                  className="rounded-xl bg-foreground px-4 py-2 text-sm font-medium text-background hover:bg-foreground/90"
-                  href="mailto:youremail@example.com"
-              >
-                Email me
-              </a>
-              <a
-                  className="rounded-xl border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-hover"
-                  href="https://www.linkedin.com/in/michaelkevinmckibbin/"
-                  target="_blank"
-                  rel="noreferrer"
-              >
-                LinkedIn
-              </a>
-            </div>
-          </section>
 
           <footer className="mt-16 border-t border-border pt-8 text-sm text-muted">
             © {new Date().getFullYear()} Michael McKibbin
