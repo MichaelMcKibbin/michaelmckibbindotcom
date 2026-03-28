@@ -52,6 +52,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     <p className="max-w-2xl text-sm text-muted sm:text-base">
                         {project.description}
                     </p>
+                    <p className="max-w-2xl text-sm text-muted sm:text-base">
+                        {project.secondParagraph}
+                    </p>
+
                     <p className="text-xs text-muted">{project.tech}</p>
                 </header>
 
@@ -95,6 +99,29 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         ))}
                     </section>
                 )}
+                {project.videos && project.videos.length > 0 && (
+                    <section className="mt-10 grid gap-6 sm:grid-cols-2">
+                        {project.videos.map((video) => (
+                            <div
+                                key={video.src}
+                                className="overflow-hidden rounded-2xl border border-border bg-card"
+                            >
+                                <video
+                                    src={video.src}
+                                    className="h-full w-full object-cover"
+                                    controls
+                                    // autoPlay
+                                    // loop
+                                    // muted
+                                    poster={video.poster}
+                                >
+                                    Sorry, your browser doesn't support embedded videos.
+                                </video>
+                            </div>
+                        ))}
+                    </section>
+                )}
+
             </div>
         </main>
     );

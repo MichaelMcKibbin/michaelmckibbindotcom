@@ -3,10 +3,12 @@ export type Project = {
     slug: string;
     title: string;
     description: string;
+    secondParagraph?: string;
     tech: string;
     githubUrl: string;
     liveUrl?: string;
     images: { src: string; alt: string }[];
+    videos?: { src?: string; alt?: string; poster?: string }[];
 };
 
 export const projects: Project[] = [
@@ -14,16 +16,28 @@ export const projects: Project[] = [
         slug: "puzzlepaddy",
         title: "PuzzlePaddy",
         description:
-            "Games and puzzles built with Next.js — playful UX, clean engineering and small, focused experiences.",
-        tech: "Next.js • TypeScript • Tailwind",
+            "PuzzlePaddy is a Next.js web application delivering interactive games and puzzles with a playful user experience and clean, component-driven design. The platform is built with React and Tailwind CSS, using server-side rendering where appropriate, and is deployed via a Docker-based CI/CD pipeline using GitHub Actions and webhooks.",
+        secondParagraph:
+            "An ongoing personal project to create a fun and engaging platform for puzzle enthusiasts. "+
+            "New games and features are added regularly. The codebase is structured to allow for easy expansion and maintenance, with a focus on clean, reusable components and efficient server-side rendering.",
+        tech: "Next.js (SSR) • React • TypeScript • Tailwind CSS • Docker • GitHub Actions • Webhook-based deployment",
         githubUrl: "https://github.com/MichaelMcKibbin/puzzlepaddy",
         liveUrl: "https://puzzlepaddy.com",
         images: [
             {
-                src: "/images/puzzlepaddy.png",
-                alt: "PuzzlePaddy project preview",
+                src: "/images/PP_homepage_snip.jpg",
+                alt: "PuzzlePaddy homepage preview",
             },
+
         ],
+        videos: [
+            {
+                src: "/videos/PP_4ROW_VID_720.mp4",
+                alt: "PuzzlePaddy 4 in a row preview",
+                // poster: "/images/PP_4ROW_thumb.jpg"
+            },
+        ]
+
     },
     {
         slug: "vienna-u-bahn-route-finder",
@@ -38,6 +52,13 @@ export const projects: Project[] = [
                 alt: "Vienna U-Bahn Route Finder screenshot",
             },
         ],
+        videos: [
+            {
+                // src: "/videos/PP_4ROW_VID_720.mp4",
+                // alt: "PuzzlePaddy 4 in a row preview",
+                // poster: "/images/PP_4ROW_thumb.jpg"
+            },
+        ]
     },
     {
         slug: "ticket-tracking-app",
