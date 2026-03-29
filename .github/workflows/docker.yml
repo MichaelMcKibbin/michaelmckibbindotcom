@@ -25,4 +25,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/michaelmckibbin/michaelmckibbindotcom:latest
+          tags: |
+            ghcr.io/michaelmckibbin/michaelmckibbindotcom:latest
+            ghcr.io/michaelmckibbin/michaelmckibbindotcom:sha-${{ github.sha }}
