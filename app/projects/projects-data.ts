@@ -49,7 +49,8 @@ export const projects: Project[] = [
         slug: "vienna-u-bahn-route-finder",
         title: "Vienna U-Bahn Route Finder",
         description:
-            "A Java/JavaFX desktop route finder using a rich station dataset with coordinates and U-Bahn lines.",
+            "This JavaFX application allows the user to search for and find routes between stations on the Vienna U-Bahn railway system. " +
+            "A demonstration of BFS, DFS, and Dijkstra’s search algorithms built with Java, JavaFX, JUnit, and Maven.",
         tech: "Java • JavaFX • Algorithms",
         githubUrl: "https://github.com/MichaelMcKibbin/ViennaUBahn",
         images: [
@@ -70,9 +71,8 @@ export const projects: Project[] = [
         slug: "ticket-tracking-app",
         title: "Ticket Tracking App",
         description:
-            "A JavaFX desktop Trouble Ticket Tracking System built in Java 17/21 and JavaFX, with JSON persistence, ticket filtering, comment history, visual priority indicators, and a clean UI.\n" +
-            "This project is ideal for learning JavaFX, MVC patterns, and desktop data management.",
-        tech: "Java • JavaFX • JSON",
+            "A JavaFX desktop Trouble Ticket Tracking System built in Java 17/21 and JavaFX, with JSON persistence, ticket filtering, comment history, visual priority indicators, and a clean UI.",
+        tech: "Java • JavaFX • JUnit",
         githubUrl: "https://github.com/MichaelMcKibbin/TicketTrackingApp",
         images: [
             {
@@ -106,6 +106,20 @@ export const projects: Project[] = [
             {
                 src: "/images/logo_ribbon.png",
                 alt: "Cloud and DevOps automation",
+            },
+        ],
+    },
+    {
+        slug: "csv-data-processor",
+        title: "CSV Data Processor CLI",
+        description: "A console-based CSV data processor built as a group university project, featuring configurable CSV parsing, validation, and round-trip transformations, backed by comprehensive JUnit test coverage and CI.",
+        secondParagraph: "A modular, production-grade Java library for reading, parsing, validating, transforming, and writing CSV files with clean object-oriented design and comprehensive test coverage. The project includes a command-line interface for processing CSV files with configurable options, and is built using Java 21, Maven, JaCoCo for test coverage, JUnit 5 for testing, and GitHub Actions for continuous integration.",
+        tech: "Java 21 • Maven • JaCoCo • JUnit 5 • Github Actions",
+        githubUrl: "https://github.com/MichaelMcKibbin/ATU-SoftDev-Grp5Project",
+        images: [
+            {
+                src: "/images/logo_ribbon.png",
+                alt: "CSV Data Processor CLI",
             },
         ],
     },
